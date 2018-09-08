@@ -22,7 +22,9 @@ int main() {
     display (54654564564564654, 5);
     display (5.3546, 987.6465468);
     display (9, 9);
-    display ("string val", "string val");
+
+    // we can specify the type explicitly.
+    display <string, string> ("string val", "string val");
 
     return 0;
 }
