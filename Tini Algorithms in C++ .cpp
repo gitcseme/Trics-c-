@@ -7,6 +7,7 @@ using namespace std;
     3. transform
     4. remove_if
     5. accumulate
+    6. upper_bound and lower_bound
 */
 
 int main() {
@@ -44,6 +45,22 @@ int main() {
         return f+s;
     });
     cout << sum << "\n";
+    cout << "\n------------------------------------\n";
+
+    vector <int> vk(10);
+    vk[0] = 1;
+    vk[1] = 2;
+    vk[2] = 3;
+    vk[3] = 3;
+    vk[4] = 4;
+    vk[5] = 7;
+
+    vector <int> :: iterator lower, upper;
+    int low = lower_bound(vk.begin(), vk.end(), 3) - vk.begin(); // 2
+    int hi = upper_bound(vk.begin(), vk.end(), 3) - vk.begin(); // 4
+
+    cout << low << " " << hi;
+
 
     return 0;
 }
