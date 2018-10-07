@@ -8,6 +8,8 @@ using namespace std;
     4. remove_if
     5. accumulate
     6. upper_bound and lower_bound
+    7. max_element   min_element
+    8. erase using iterator
 */
 
 int main() {
@@ -52,14 +54,38 @@ int main() {
     vk[1] = 2;
     vk[2] = 3;
     vk[3] = 3;
-    vk[4] = 4;
+    vk[4] = 5;
     vk[5] = 7;
 
     vector <int> :: iterator lower, upper;
-    int low = lower_bound(vk.begin(), vk.end(), 3) - vk.begin(); // 2
     int hi = upper_bound(vk.begin(), vk.end(), 3) - vk.begin(); // 4
+    int low = lower_bound(vk.begin(), vk.end(), 3) - vk.begin(); // 2
+    cout << hi << " " << low;
+    cout << "\n------------------------------------\n";
 
-    cout << low << " " << hi;
+    vector <int> t(10);
+    t[0] = 5;
+    t[1] = 6;
+    t[2] = -3;
+    t[3] = 9;
+    t[4] = 27;
+    t[5] = 4;
+    int minel = *min_element(t.begin(), t.end());
+    int maxel = *max_element(t.begin(), t.end());
+    cout << minel << " " << maxel << "\n";
+    cout << "\n------------------------------------\n";
+
+
+    vector <int> tt(5);
+    tt[0] = 2;
+    tt[1] = 3;
+    tt[2] = 5;
+    tt[3] = -1;
+    tt[4] = 1;
+    auto mx = max_element(tt.begin(), tt.end());
+    cout << *mx << "\n\n";
+    tt.erase(mx);
+    for(int x : tt) cout << x << "\n";
 
 
     return 0;
