@@ -7,6 +7,14 @@ using namespace std;
     4. own comparison function defined.
     5. set element order can be tracked via a vector [in another code].
 */
+
+struct cmpStruct {
+  bool operator() (int const & lhs, int const & rhs) const
+  {
+    return lhs > rhs;
+  }
+};
+
 template <typename T> struct mycomp {
     bool operator() (const T& o1, const T& o2) const {
         return o1.second < o2.second;
@@ -14,6 +22,8 @@ template <typename T> struct mycomp {
 };
 
 int main () {
+    set<int, cmpStruct > myInverseSortedSet;
+
     set <int, greater<int> > st;
     st.insert(5);
     st.insert(9);
