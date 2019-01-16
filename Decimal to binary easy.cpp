@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/* simply convert to binary */
+
 int main() {
 
     int n;
