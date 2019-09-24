@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ff first
+#define ss second
+#define all(ar) ar.begin(), ar.end()
 #define FI freopen ("inp.txt", "r", stdin)
 #define FO freopen ("out.txt", "w", stdout)
 #define FOR(v) for(int i : v) {printf("%d ", i);} printf("\n");
