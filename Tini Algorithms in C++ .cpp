@@ -82,7 +82,7 @@ int main() {
     tt[2] = 5;
     tt[3] = -1;
     tt[4] = 1;
-    auto mx = max_element(tt.begin(), tt.end());
+    auto mx = max_element(tt.begin(), tt.end()); // Returns iterator
     cout << *mx << "\n\n";
     tt.erase(mx);
     for(int x : tt) cout << x << "\n";
