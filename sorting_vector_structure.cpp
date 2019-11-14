@@ -9,18 +9,19 @@ struct Point {
     }
 };
 
-/*
+
 bool comp (Point a, Point b) {
     if (a.x != b.x)
         return a.x < b.x;
     return a.y < b.y;
 }
-*/
+/*
 bool operator < (Point a, Point b) {
     if (a.x != b.x)
         return a.x < b.x;
     return a.y < b.y;
 }
+*/
 
 int main() {
     freopen("input.txt", "r", stdin);
@@ -32,7 +33,7 @@ int main() {
     }
 
     //sort(v.begin(), v.end(), comp);
-    sort(v.begin(), v.end());
+    sort(v.begin(), v.end(), comp);
 
     for (Point p : v)
         cout << p.x << " " << p.y << "\n";
